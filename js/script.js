@@ -369,3 +369,57 @@ whatsappOrder.href =
     renderProducts();
 
 });
+
+/* =====================================================
+   RAKHI SPECIAL SALE POPUP
+===================================================== */
+
+const salePopup = document.getElementById("salePopup");
+const salePopupClose = document.getElementById("salePopupClose");
+const salePopupOverlay = document.querySelector(".sale-popup-overlay");
+const salePopupShop = document.getElementById("salePopupShop");
+
+function openSalePopup() {
+    salePopup.classList.add("active");
+    salePopup.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+}
+
+function closeSalePopup() {
+    salePopup.classList.remove("active");
+    salePopup.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+}
+
+if (salePopup) {
+
+    setTimeout(() => {
+        openSalePopup();
+    }, 1200);
+
+    salePopupClose.addEventListener(
+        "click",
+        closeSalePopup
+    );
+
+    salePopupOverlay.addEventListener(
+        "click",
+        closeSalePopup
+    );
+
+    salePopupShop.addEventListener(
+        "click",
+        () => {
+            closeSalePopup();
+
+            const collection =
+                document.getElementById("collection");
+
+            if (collection) {
+                collection.scrollIntoView({
+                    behavior: "smooth"
+                });
+            }
+        }
+    );
+}
