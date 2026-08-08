@@ -1,0 +1,2036 @@
+/* =========================================================
+   VIHAN KURTI COLLECTION
+   PART 3 — PREMIUM CSS
+========================================================= */
+
+:root {
+    --primary: #8b1e3f;
+    --primary-dark: #68142e;
+    --gold: #c99a3d;
+    --cream: #fffaf6;
+    --white: #ffffff;
+    --text: #211a1c;
+    --muted: #766c6f;
+    --border: #eadfe2;
+    --shadow: 0 12px 35px rgba(42, 20, 27, 0.08);
+    --shadow-hover: 0 20px 45px rgba(42, 20, 27, 0.14);
+    --radius: 22px;
+}
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+.container {
+    width: min(1120px, calc(100% - 32px));
+    margin: 0 auto;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255, 250, 246, 0.94);
+    border-bottom: 1px solid rgba(139, 30, 63, 0.08);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+}
+
+.header-inner {
+    min-height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    max-width: 170px;
+}
+
+.logo img {
+    width: auto;
+    max-width: 170px;
+    max-height: 52px;
+    object-fit: contain;
+}
+
+.header-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 42px;
+    padding: 0 18px;
+    border-radius: 999px;
+    background: var(--primary);
+    color: var(--white);
+    font-size: 13px;
+    font-weight: 700;
+    transition: 0.25s ease;
+}
+
+.header-btn:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    position: relative;
+    padding: 52px 0 70px;
+    overflow: hidden;
+    background:
+        radial-gradient(
+            circle at 85% 15%,
+            rgba(201, 154, 61, 0.15),
+            transparent 30%
+        ),
+        linear-gradient(
+            180deg,
+            #fffaf6 0%,
+            #fff7f3 100%
+        );
+}
+
+.hero-content {
+    max-width: 700px;
+    margin: 0 auto 34px;
+    text-align: center;
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px 13px;
+    border: 1px solid rgba(139, 30, 63, 0.16);
+    border-radius: 999px;
+    background: rgba(139, 30, 63, 0.05);
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+
+.hero h1 {
+    margin-top: 18px;
+    font-family: "Playfair Display", serif;
+    font-size: clamp(42px, 7vw, 76px);
+    line-height: 1.04;
+    letter-spacing: -1.8px;
+    color: var(--text);
+}
+
+.hero-content p {
+    max-width: 570px;
+    margin: 18px auto 0;
+    color: var(--muted);
+    font-size: 16px;
+}
+
+/* =========================================================
+   HERO IMAGE
+========================================================= */
+
+.hero-image {
+    position: relative;
+    width: min(760px, 100%);
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 30px;
+    box-shadow: 0 25px 70px rgba(42, 20, 27, 0.15);
+}
+
+.hero-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+        linear-gradient(
+            180deg,
+            transparent 65%,
+            rgba(0, 0, 0, 0.18)
+        );
+}
+
+.hero-image img {
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+/* =========================================================
+   HERO FEATURES
+========================================================= */
+
+.hero-features {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 24px;
+}
+
+.hero-features div {
+    padding: 9px 14px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: var(--white);
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 600;
+    box-shadow: 0 5px 18px rgba(42, 20, 27, 0.04);
+}
+
+/* =========================================================
+   HERO BUTTONS
+========================================================= */
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.primary-btn,
+.secondary-btn {
+    min-height: 52px;
+    padding: 0 25px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 700;
+    transition: 0.25s ease;
+}
+
+.primary-btn {
+    background: var(--primary);
+    color: var(--white);
+    box-shadow: 0 10px 25px rgba(139, 30, 63, 0.22);
+}
+
+.primary-btn:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+.secondary-btn {
+    background: var(--white);
+    color: var(--primary);
+    border: 1px solid var(--border);
+}
+
+.secondary-btn:hover {
+    border-color: var(--primary);
+    transform: translateY(-2px);
+}
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.products,
+.why-us,
+.faq {
+    padding: 82px 0;
+}
+
+.products {
+    background: var(--white);
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 42px;
+}
+
+.section-heading h2 {
+    margin-top: 14px;
+    font-family: "Playfair Display", serif;
+    font-size: clamp(34px, 5vw, 52px);
+    line-height: 1.1;
+    letter-spacing: -1px;
+}
+
+.section-heading p {
+    margin-top: 10px;
+    color: var(--muted);
+    font-size: 15px;
+}
+
+/* =========================================================
+   PRODUCT GRID
+========================================================= */
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+}
+
+/* Product cards will be generated in PART 4 */
+
+.product-card {
+    overflow: hidden;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-hover);
+}
+
+.product-image {
+    position: relative;
+    overflow: hidden;
+    background: #f6f1ee;
+}
+
+.product-image img {
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    transition: transform 0.45s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.035);
+}
+
+.product-info {
+    padding: 16px;
+}
+
+.product-code {
+    color: var(--primary);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+}
+
+.product-name {
+    margin-top: 5px;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.product-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 14px;
+}
+
+.product-price {
+    color: var(--primary);
+    font-size: 17px;
+    font-weight: 800;
+}
+
+.view-product {
+    min-height: 38px;
+    padding: 0 13px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    border-radius: 999px;
+    background: var(--primary);
+    color: var(--white);
+    font-family: inherit;
+    font-size: 11px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.view-product:hover {
+    background: var(--primary-dark);
+}
+
+/* =========================================================
+   WHY US
+========================================================= */
+
+.why-us {
+    background: var(--cream);
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.why-card {
+    padding: 28px 22px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.why-icon {
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    border-radius: 15px;
+    background: rgba(139, 30, 63, 0.07);
+    font-size: 21px;
+}
+
+.why-card h3 {
+    margin-top: 18px;
+    font-size: 16px;
+}
+
+.why-card p {
+    margin-top: 8px;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+/* =========================================================
+   FAQ
+========================================================= */
+
+.faq {
+    background: var(--white);
+}
+
+.faq-item {
+    max-width: 760px;
+    margin: 0 auto 14px;
+    padding: 22px 24px;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    background: var(--cream);
+}
+
+.faq-item h4 {
+    font-size: 15px;
+}
+
+.faq-item p {
+    margin-top: 7px;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer {
+    padding: 60px 0 32px;
+    text-align: center;
+    background: #21141a;
+    color: var(--white);
+}
+
+.footer-logo {
+    width: 120px;
+    margin: 0 auto 18px;
+}
+
+.footer-logo img {
+    max-height: 60px;
+    object-fit: contain;
+}
+
+.footer h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 24px;
+}
+
+.footer p {
+    margin-top: 7px;
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 13px;
+}
+
+.footer-btn {
+    margin-top: 22px;
+    min-height: 46px;
+    padding: 0 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    background: var(--white);
+    color: var(--primary);
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.copyright {
+    margin-top: 38px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.45);
+    font-size: 11px;
+}
+
+/* =========================================================
+   FLOATING WHATSAPP
+========================================================= */
+
+.floating-whatsapp {
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    z-index: 1200;
+    width: 56px;
+    height: 56px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: #25d366;
+    color: var(--white);
+    font-size: 22px;
+    box-shadow: 0 12px 30px rgba(37, 211, 102, 0.3);
+    animation: whatsappPulse 2s infinite;
+}
+
+@keyframes whatsappPulse {
+    0%,
+    100% {
+        box-shadow:
+            0 12px 30px rgba(37, 211, 102, 0.3);
+    }
+
+    50% {
+        box-shadow:
+            0 12px 30px rgba(37, 211, 102, 0.3),
+            0 0 0 9px rgba(37, 211, 102, 0.09);
+    }
+}
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: none;
+    padding: 20px;
+}
+
+.modal.active {
+    display: grid;
+    place-items: center;
+}
+
+.modal-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(24, 12, 17, 0.72);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+}
+
+.modal-container {
+    position: relative;
+    z-index: 1;
+    width: min(900px, 100%);
+    max-height: 92vh;
+    overflow-y: auto;
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 24px;
+    padding: 24px;
+    border-radius: 26px;
+    background: var(--white);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.3);
+}
+
+.modal-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 5;
+    width: 38px;
+    height: 38px;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.06);
+    color: var(--text);
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.modal-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.modal-gallery img {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    border-radius: 18px;
+    background: #f5efec;
+}
+
+.modal-details {
+    align-self: center;
+    padding: 20px;
+}
+
+.modal-details h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 32px;
+    line-height: 1.15;
+}
+
+.modal-price {
+    margin-top: 12px;
+    color: var(--primary);
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.modal-features {
+    margin-top: 24px;
+}
+
+.modal-features > div {
+    padding: 13px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    border-bottom: 1px solid var(--border);
+}
+
+.modal-features span {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.modal-features strong {
+    font-size: 13px;
+}
+
+.modal-order-btn {
+    width: 100%;
+    min-height: 52px;
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    background: var(--primary);
+    color: var(--white);
+    font-size: 14px;
+    font-weight: 800;
+    transition: 0.25s ease;
+}
+
+.modal-order-btn:hover {
+    background: var(--primary-dark);
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .product-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .why-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 640px) {
+
+    .container {
+        width: min(100% - 24px, 500px);
+    }
+
+    .header-inner {
+        min-height: 64px;
+    }
+
+    .logo {
+        max-width: 135px;
+    }
+
+    .logo img {
+        max-width: 135px;
+        max-height: 44px;
+    }
+
+    .header-btn {
+        min-height: 38px;
+        padding: 0 14px;
+        font-size: 12px;
+    }
+
+    .hero {
+        padding: 38px 0 55px;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+        letter-spacing: -1.2px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+    }
+
+    .hero-image {
+        border-radius: 22px;
+    }
+
+    .hero-image img {
+        aspect-ratio: 4 / 5;
+    }
+
+    .hero-features {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .hero-features div {
+        text-align: center;
+    }
+
+    .hero-buttons {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .primary-btn,
+    .secondary-btn {
+        width: 100%;
+    }
+
+    .products,
+    .why-us,
+    .faq {
+        padding: 62px 0;
+    }
+
+    .section-heading {
+        margin-bottom: 30px;
+    }
+
+    .section-heading h2 {
+        font-size: 36px;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .product-card {
+        border-radius: 17px;
+    }
+
+    .product-info {
+        padding: 12px;
+    }
+
+    .product-name {
+        font-size: 13px;
+    }
+
+    .product-price {
+        font-size: 15px;
+    }
+
+    .view-product {
+        min-height: 34px;
+        padding: 0 10px;
+        font-size: 10px;
+    }
+
+    .why-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .why-card {
+        padding: 22px 18px;
+    }
+
+    .faq-item {
+        padding: 18px;
+    }
+
+    .modal {
+        padding: 12px;
+    }
+
+    .modal-container {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        max-height: 94vh;
+        padding: 14px;
+        border-radius: 22px;
+    }
+
+    .modal-gallery {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+    }
+
+    .modal-gallery img {
+        border-radius: 13px;
+    }
+
+    .modal-details {
+        padding: 12px 5px 5px;
+    }
+
+    .modal-details h2 {
+        font-size: 26px;
+    }
+
+    .modal-price {
+        font-size: 21px;
+    }
+
+    .floating-whatsapp {
+        right: 14px;
+        bottom: 14px;
+        width: 52px;
+        height: 52px;
+    }
+
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .product-grid {
+        gap: 9px;
+    }
+
+    .product-info {
+        padding: 10px;
+    }
+
+}
+
+/* =========================================================
+   PART 6 — PREMIUM MOBILE OPTIMIZATION
+   Target: 360px - 430px
+========================================================= */
+
+@media (max-width: 600px) {
+
+    /* -----------------------------------------
+       GLOBAL
+    ----------------------------------------- */
+
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .container {
+        width: calc(100% - 28px);
+        max-width: 430px;
+    }
+
+
+    /* -----------------------------------------
+       HEADER
+    ----------------------------------------- */
+
+    .header-inner {
+        height: 62px;
+        min-height: 62px;
+    }
+
+    .logo {
+        max-width: 115px;
+    }
+
+    .logo img {
+        width: auto;
+        max-width: 115px;
+        max-height: 42px;
+    }
+
+    .header-btn {
+        min-height: 36px;
+        padding: 0 15px;
+        font-size: 11px;
+    }
+
+
+    /* -----------------------------------------
+       HERO
+    ----------------------------------------- */
+
+    .hero {
+        padding: 34px 0 42px;
+    }
+
+    .hero-content {
+        margin-bottom: 25px;
+    }
+
+    .hero-badge {
+        padding: 6px 11px;
+        font-size: 10px;
+    }
+
+    .hero h1 {
+        margin-top: 14px;
+        font-size: clamp(38px, 11vw, 48px);
+        line-height: 1.02;
+        letter-spacing: -1.4px;
+    }
+
+    .hero-content p {
+        max-width: 340px;
+        margin-top: 14px;
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+
+    /* -----------------------------------------
+       HERO IMAGE
+    ----------------------------------------- */
+
+    .hero-image {
+        width: 100%;
+        border-radius: 20px;
+        box-shadow:
+            0 18px 45px rgba(42, 20, 27, 0.13);
+    }
+
+    .hero-image img {
+        width: 100%;
+        aspect-ratio: 4 / 5;
+        object-fit: cover;
+    }
+
+
+    /* -----------------------------------------
+       HERO FEATURES
+    ----------------------------------------- */
+
+    .hero-features {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 8px;
+        margin-top: 18px;
+    }
+
+    .hero-features div {
+        width: 100%;
+        padding: 9px 10px;
+        font-size: 10px;
+        text-align: center;
+    }
+
+
+    /* -----------------------------------------
+       CTA BUTTONS
+    ----------------------------------------- */
+
+    .hero-buttons {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 9px;
+        margin-top: 20px;
+    }
+
+    .primary-btn,
+    .secondary-btn {
+        width: 100%;
+        min-height: 48px;
+        font-size: 12px;
+    }
+
+
+    /* -----------------------------------------
+       COLLECTION
+    ----------------------------------------- */
+
+    .products {
+        padding: 55px 0 58px;
+    }
+
+    .section-heading {
+        margin-bottom: 25px;
+    }
+
+    .section-heading .hero-badge {
+        font-size: 10px;
+    }
+
+    .section-heading h2 {
+        margin-top: 11px;
+        font-size: 34px;
+        letter-spacing: -0.8px;
+    }
+
+    .section-heading p {
+        margin-top: 7px;
+        font-size: 12px;
+    }
+
+
+    /* -----------------------------------------
+       PRODUCT GRID
+    ----------------------------------------- */
+
+    .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .product-card {
+        border-radius: 16px;
+        box-shadow:
+            0 7px 22px rgba(42, 20, 27, 0.07);
+    }
+
+    .product-image {
+        border-radius: 0;
+    }
+
+    .product-image img {
+        width: 100%;
+        aspect-ratio: 3 / 4;
+        object-fit: cover;
+    }
+
+    .product-info {
+        padding: 11px;
+    }
+
+    .product-code {
+        font-size: 9px;
+        letter-spacing: 0.6px;
+    }
+
+    .product-name {
+        margin-top: 4px;
+        font-size: 11px;
+        line-height: 1.35;
+
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .product-bottom {
+        margin-top: 10px;
+        align-items: center;
+    }
+
+    .product-price {
+        font-size: 14px;
+    }
+
+    .view-product {
+        min-height: 32px;
+        padding: 0 11px;
+        font-size: 9px;
+    }
+
+
+    /* -----------------------------------------
+       WHY CHOOSE US
+    ----------------------------------------- */
+
+    .why-us {
+        padding: 55px 0;
+    }
+
+    .why-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .why-card {
+        padding: 18px;
+        border-radius: 17px;
+    }
+
+    .why-icon {
+        width: 42px;
+        height: 42px;
+        border-radius: 13px;
+        font-size: 18px;
+    }
+
+    .why-card h3 {
+        margin-top: 13px;
+        font-size: 14px;
+    }
+
+    .why-card p {
+        margin-top: 5px;
+        font-size: 11px;
+        line-height: 1.55;
+    }
+
+
+    /* -----------------------------------------
+       FAQ
+    ----------------------------------------- */
+
+    .faq {
+        padding: 55px 0;
+    }
+
+    .faq-item {
+        margin-bottom: 9px;
+        padding: 17px;
+        border-radius: 16px;
+    }
+
+    .faq-item h4 {
+        font-size: 13px;
+    }
+
+    .faq-item p {
+        margin-top: 6px;
+        font-size: 11px;
+        line-height: 1.55;
+    }
+
+
+    /* -----------------------------------------
+       FOOTER
+    ----------------------------------------- */
+
+    .footer {
+        padding: 48px 0 25px;
+    }
+
+    .footer-logo {
+        width: 95px;
+        margin-bottom: 14px;
+    }
+
+    .footer h3 {
+        font-size: 21px;
+    }
+
+    .footer p {
+        font-size: 11px;
+    }
+
+    .footer-btn {
+        min-height: 43px;
+        margin-top: 18px;
+        padding: 0 18px;
+        font-size: 11px;
+    }
+
+    .copyright {
+        margin-top: 28px;
+        padding-top: 17px;
+        font-size: 9px;
+    }
+
+
+    /* -----------------------------------------
+       WHATSAPP FLOATING BUTTON
+    ----------------------------------------- */
+
+    .floating-whatsapp {
+        right: 14px;
+        bottom: 14px;
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+
+
+    /* -----------------------------------------
+       PRODUCT MODAL
+    ----------------------------------------- */
+
+    .modal {
+        padding: 10px;
+    }
+
+    .modal-container {
+        width: 100%;
+        max-height: 94vh;
+        padding: 12px;
+        border-radius: 20px;
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+
+    .modal-close {
+        top: 8px;
+        right: 8px;
+        width: 34px;
+        height: 34px;
+        font-size: 22px;
+    }
+
+    .modal-gallery {
+        grid-template-columns: 1fr 1fr;
+        gap: 7px;
+    }
+
+    .modal-gallery img {
+        aspect-ratio: 3 / 4;
+        border-radius: 12px;
+    }
+
+    .modal-details {
+        padding: 10px 3px 3px;
+    }
+
+    .modal-details h2 {
+        font-size: 23px;
+        line-height: 1.15;
+    }
+
+    .modal-price {
+        margin-top: 7px;
+        font-size: 19px;
+    }
+
+    .modal-features {
+        margin-top: 14px;
+    }
+
+    .modal-features > div {
+        padding: 9px 0;
+    }
+
+    .modal-features span {
+        font-size: 10px;
+    }
+
+    .modal-features strong {
+        font-size: 11px;
+    }
+
+    .modal-order-btn {
+        min-height: 46px;
+        margin-top: 15px;
+        font-size: 12px;
+    }
+
+}
+
+
+/* =========================================================
+   EXTRA SMALL — 360px
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .container {
+        width: calc(100% - 22px);
+    }
+
+    .hero h1 {
+        font-size: 37px;
+    }
+
+    .product-grid {
+        gap: 8px;
+    }
+
+    .product-info {
+        padding: 9px;
+    }
+
+    .product-price {
+        font-size: 13px;
+    }
+
+    .view-product {
+        min-height: 30px;
+        padding: 0 9px;
+        font-size: 8px;
+    }
+
+}
+
+/* =========================================================
+   PART 7 — MOBILE HERO POLISH
+========================================================= */
+
+@media (max-width: 600px) {
+
+    /* HERO IMAGE — slightly shorter */
+    .hero-image {
+        border-radius: 20px;
+    }
+
+    .hero-image img {
+        aspect-ratio: 5 / 6;
+        object-fit: cover;
+    }
+
+
+    /* FEATURE PILLS — compact 3 columns */
+    .hero-features {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 6px;
+        margin-top: 14px;
+    }
+
+    .hero-features div {
+        min-height: 34px;
+        padding: 7px 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        font-size: 8px;
+        line-height: 1.2;
+    }
+
+
+    /* CTA AREA */
+    .hero-buttons {
+        margin-top: 16px;
+        gap: 8px;
+    }
+
+    .primary-btn,
+    .secondary-btn {
+        min-height: 46px;
+    }
+
+
+    /* WHATSAPP BUTTON */
+    .floating-whatsapp {
+        right: 12px;
+        bottom: 12px;
+        width: 48px;
+        height: 48px;
+        z-index: 1500;
+    }
+
+}
+
+/* =========================================================
+   PART 8 — MOBILE WHATSAPP POSITION FIX
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .floating-whatsapp {
+        right: 12px;
+        bottom: 16px;
+        width: 48px;
+        height: 48px;
+    }
+
+    /*
+       Keep WhatsApp button away from CTA area
+       while scrolling naturally.
+    */
+    .hero {
+        padding-bottom: 55px;
+    }
+
+}
+
+/* =========================================================
+   PART 9 — SHOW COMPLETE HERO IMAGE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .hero-image {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        border-radius: 20px;
+        background: #f8f1ec;
+    }
+
+    .hero-image img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: auto;
+        object-fit: contain;
+        display: block;
+    }
+
+}
+
+/* =========================================================
+   PART 10 — PREMIUM MOBILE PRODUCT COLLECTION
+========================================================= */
+
+@media (max-width: 600px) {
+
+    /* -----------------------------------------
+       COLLECTION SECTION
+    ----------------------------------------- */
+
+    .products {
+        padding: 58px 0 64px;
+        background: #ffffff;
+    }
+
+    .products .section-heading {
+        margin-bottom: 28px;
+    }
+
+    .products .section-heading h2 {
+        font-family: "Playfair Display", serif;
+        font-size: 34px;
+        line-height: 1.1;
+        letter-spacing: -0.7px;
+    }
+
+    .products .section-heading p {
+        margin-top: 8px;
+        font-size: 12px;
+    }
+
+
+    /* -----------------------------------------
+       PRODUCT GRID
+    ----------------------------------------- */
+
+    .product-grid {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+
+    /* -----------------------------------------
+       PRODUCT CARD
+    ----------------------------------------- */
+
+    .product-card {
+        width: 100%;
+        min-width: 0;
+        overflow: hidden;
+        background: #ffffff;
+        border: 1px solid #eee3e5;
+        border-radius: 18px;
+
+        box-shadow:
+            0 7px 24px rgba(45, 20, 28, 0.07);
+
+        transition:
+            transform 0.25s ease,
+            box-shadow 0.25s ease;
+    }
+
+    .product-card:active {
+        transform: scale(0.985);
+    }
+
+
+    /* -----------------------------------------
+       PRODUCT IMAGE
+    ----------------------------------------- */
+
+    .product-image {
+        width: 100%;
+        overflow: hidden;
+        background: #f8f3f0;
+    }
+
+    .product-image img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 3 / 4;
+        object-fit: cover;
+        display: block;
+    }
+
+
+    /* -----------------------------------------
+       PRODUCT INFORMATION
+    ----------------------------------------- */
+
+    .product-info {
+        padding: 12px 11px 13px;
+    }
+
+    .product-code {
+        font-size: 9px;
+        font-weight: 800;
+        letter-spacing: 0.7px;
+        color: #8b1e3f;
+    }
+
+    .product-name {
+        margin-top: 4px;
+        font-size: 12px;
+        line-height: 1.35;
+        font-weight: 700;
+
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+
+    /* -----------------------------------------
+       PRICE + VIEW BUTTON
+    ----------------------------------------- */
+
+    .product-bottom {
+        width: 100%;
+        margin-top: 11px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 7px;
+    }
+
+    .product-price {
+        font-size: 15px;
+        line-height: 1;
+        font-weight: 800;
+        color: #8b1e3f;
+        white-space: nowrap;
+    }
+
+    .view-product {
+        min-height: 32px;
+        padding: 0 12px;
+
+        border: 0;
+        border-radius: 999px;
+
+        background: #8b1e3f;
+        color: #ffffff;
+
+        font-family: "DM Sans", sans-serif;
+        font-size: 9px;
+        font-weight: 800;
+
+        cursor: pointer;
+
+        white-space: nowrap;
+
+        transition:
+            background 0.2s ease,
+            transform 0.2s ease;
+    }
+
+    .view-product:active {
+        transform: scale(0.95);
+    }
+
+
+    /* -----------------------------------------
+       SMALL MOBILE — 360px
+    ----------------------------------------- */
+
+    @media (max-width: 380px) {
+
+        .product-grid {
+            gap: 9px;
+        }
+
+        .product-card {
+            border-radius: 16px;
+        }
+
+        .product-info {
+            padding: 10px;
+        }
+
+        .product-name {
+            font-size: 11px;
+        }
+
+        .product-price {
+            font-size: 14px;
+        }
+
+        .view-product {
+            min-height: 30px;
+            padding: 0 10px;
+            font-size: 8px;
+        }
+
+    }
+
+}
+
+/* =========================================================
+   PART 11 — PREMIUM PRODUCT POPUP / MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .modal {
+        position: fixed;
+        inset: 0;
+        z-index: 3000;
+
+        display: none;
+
+        padding: 10px;
+
+        align-items: center;
+        justify-content: center;
+    }
+
+    .modal.active {
+        display: flex;
+    }
+
+
+    /* -----------------------------------------
+       DARK BACKDROP
+    ----------------------------------------- */
+
+    .modal-overlay {
+        position: absolute;
+        inset: 0;
+
+        background: rgba(25, 12, 18, 0.76);
+
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+    }
+
+
+    /* -----------------------------------------
+       POPUP
+    ----------------------------------------- */
+
+    .modal-container {
+        position: relative;
+        z-index: 1;
+
+        width: 100%;
+        max-width: 410px;
+
+        max-height: 94vh;
+        overflow-y: auto;
+
+        display: block;
+
+        padding: 12px;
+
+        background: #ffffff;
+
+        border-radius: 22px;
+
+        box-shadow:
+            0 25px 70px rgba(0, 0, 0, 0.30);
+
+        animation: productPopupIn 0.25s ease;
+    }
+
+
+    @keyframes productPopupIn {
+
+        from {
+            opacity: 0;
+            transform: translateY(18px) scale(0.97);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+    }
+
+
+    /* -----------------------------------------
+       CLOSE BUTTON
+    ----------------------------------------- */
+
+    .modal-close {
+        position: absolute;
+
+        top: 8px;
+        right: 8px;
+
+        z-index: 10;
+
+        width: 34px;
+        height: 34px;
+
+        display: grid;
+        place-items: center;
+
+        border: 0;
+        border-radius: 50%;
+
+        background: rgba(255, 255, 255, 0.94);
+
+        color: #211a1c;
+
+        font-size: 22px;
+        line-height: 1;
+
+        cursor: pointer;
+
+        box-shadow:
+            0 4px 15px rgba(0, 0, 0, 0.12);
+    }
+
+
+    /* -----------------------------------------
+       FRONT + BACK IMAGES
+    ----------------------------------------- */
+
+    .modal-gallery {
+        width: 100%;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        gap: 8px;
+    }
+
+    .modal-gallery img {
+        width: 100%;
+        height: auto;
+
+        aspect-ratio: 3 / 4;
+
+        object-fit: contain;
+
+        background: #f7f2ef;
+
+        border-radius: 15px;
+
+        display: block;
+    }
+
+
+    /* -----------------------------------------
+       PRODUCT DETAILS
+    ----------------------------------------- */
+
+    .modal-details {
+        padding: 14px 4px 4px;
+    }
+
+    .modal-details h2 {
+        margin: 0;
+
+        font-family: "Playfair Display", serif;
+
+        font-size: 24px;
+        line-height: 1.15;
+
+        color: #211a1c;
+    }
+
+    .modal-price {
+        margin-top: 7px;
+
+        color: #8b1e3f;
+
+        font-size: 20px;
+        font-weight: 800;
+    }
+
+
+    /* -----------------------------------------
+       PRODUCT INFO
+    ----------------------------------------- */
+
+    .modal-features {
+        margin-top: 14px;
+    }
+
+    .modal-features > div {
+        min-height: 38px;
+
+        padding: 8px 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        gap: 15px;
+
+        border-bottom: 1px solid #eee3e5;
+    }
+
+    .modal-features span {
+        color: #766c6f;
+        font-size: 10px;
+    }
+
+    .modal-features strong {
+        color: #211a1c;
+        font-size: 11px;
+    }
+
+
+    /* -----------------------------------------
+       WHATSAPP ORDER
+    ----------------------------------------- */
+
+    .modal-order-btn {
+        width: 100%;
+
+        min-height: 48px;
+
+        margin-top: 15px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 999px;
+
+        background: #8b1e3f;
+        color: #ffffff;
+
+        font-size: 12px;
+        font-weight: 800;
+
+        box-shadow:
+            0 9px 22px rgba(139, 30, 63, 0.20);
+
+        transition: 0.2s ease;
+    }
+
+    .modal-order-btn:active {
+        transform: scale(0.98);
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .modal {
+        padding: 8px;
+    }
+
+    .modal-container {
+        padding: 10px;
+        border-radius: 19px;
+    }
+
+    .modal-gallery {
+        gap: 6px;
+    }
+
+    .modal-gallery img {
+        border-radius: 12px;
+    }
+
+    .modal-details h2 {
+        font-size: 21px;
+    }
+
+    .modal-price {
+        font-size: 18px;
+    }
+
+}
+
+/* =====================================================
+   OFFER TICKER
+===================================================== */
+
+.offer-ticker {
+    position: sticky;
+    top: 70px;
+    z-index: 999;
+
+    width: 100%;
+    overflow: hidden;
+    background: #8b1e3f;
+    color: #ffffff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    white-space: nowrap;
+}
+    background: #8b1e3f;
+    color: #ffffff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    white-space: nowrap;
+}
+
+.offer-track {
+    display: inline-flex;
+    align-items: center;
+    width: max-content;
+    animation: offerScroll 22s linear infinite;
+}
+
+.offer-track span {
+    display: inline-flex;
+    align-items: center;
+    padding: 9px 24px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+}
+
+@keyframes offerScroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+
+    .offer-track span {
+        padding: 8px 18px;
+        font-size: 10px;
+    }
+
+    .offer-track {
+        animation-duration: 18s;
+    }
+
+}
+
+/* =====================================================
+   FIXED RUNNING OFFER TICKER
+===================================================== */
+
+.offer-ticker {
+    position: sticky;
+    top: 70px;
+    z-index: 999;
+    width: 100%;
+    overflow: hidden;
+    background: #8b1e3f;
+    color: #fff;
+    white-space: nowrap;
+}
+
+.offer-track {
+    display: flex;
+    width: max-content;
+    animation: offerTickerMove 18s linear infinite !important;
+    will-change: transform;
+}
+
+.offer-track span {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 22px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+@keyframes offerTickerMove {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 600px) {
+
+    .offer-track {
+        animation-duration: 16s !important;
+    }
+
+    .offer-track span {
+        padding: 8px 18px;
+        font-size: 10px;
+    }
+}
