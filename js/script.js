@@ -386,8 +386,18 @@ function openSalePopup() {
 }
 
 function closeSalePopup() {
+
+    if (document.activeElement) {
+        document.activeElement.blur();
+    }
+
     salePopup.classList.remove("active");
-    salePopup.setAttribute("aria-hidden", "true");
+
+    salePopup.setAttribute(
+        "aria-hidden",
+        "true"
+    );
+
     document.body.style.overflow = "";
 }
 
