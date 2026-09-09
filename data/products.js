@@ -138,5 +138,75 @@ const products = [
         price: "₹1050",
         front: "assets/images/products/k120/front.webp",
         back: "assets/images/products/k120/back.webp"
-    }
+    },
+    {
+  code: "K121",
+  name: "Vihan Premium Kurti K121",
+  price: "₹999",
+  front: "assets/images/products/k121/front.webp",
+  back: "assets/images/products/k121/back.webp"
+},
+{
+  code: "K122",
+  name: "Vihan Premium Kurti K122",
+  price: "₹999",
+  front: "assets/images/products/k122/front.webp",
+  back: "assets/images/products/k122/back.webp"
+},
+{
+  code: "K123",
+  name: "Vihan Premium Kurti K123",
+  price: "₹999",
+  front: "assets/images/products/k123/front.webp",
+  back: "assets/images/products/k123/back.webp"
+},
+{
+  code: "K124",
+  name: "Vihan Premium Kurti K124",
+  price: "₹999",
+  front: "assets/images/products/k124/front.webp",
+  back: "assets/images/products/k124/back.webp"
+},
+{
+  code: "K125",
+  name: "Vihan Premium Kurti K125",
+  price: "₹999",
+  front: "assets/images/products/k125/front.webp",
+  back: "assets/images/products/k125/back.webp"
+},
+{
+  code: "K126",
+  name: "Vihan Premium Kurti K126",
+  price: "₹999",
+  front: "assets/images/products/k126/front.webp",
+  back: "assets/images/products/k126/back.webp"
+},
+{
+  code: "K127",
+  name: "Vihan Premium Kurti K127",
+  price: "₹999",
+  front: "assets/images/products/k127/front.webp",
+  back: "assets/images/products/k127/back.webp"
+},
+{
+  code: "K128",
+  name: "Vihan Premium Kurti K128",
+  price: "₹999",
+  front: "assets/images/products/k128/front.webp",
+  back: "assets/images/products/k128/back.webp"
+},
+{
+  code: "K129",
+  name: "Vihan Premium Kurti K129",
+  price: "₹999",
+  front: "assets/images/products/k129/front.webp",
+  back: "assets/images/products/k129/back.webp"
+},
+{
+  code: "K130",
+  name: "Vihan Premium Kurti K130",
+  price: "₹999",
+  front: "assets/images/products/k130/front.webp",
+  back: "assets/images/products/k130/back.webp"
+},
 ];
