@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
        WHATSAPP LINK
     ===================================================== */
 
-const whatsappNumber = "917649870826";
+const whatsappNumber = "919730703944";
 
 const whatsappBase =
     `https://wa.me/${whatsappNumber}`;
