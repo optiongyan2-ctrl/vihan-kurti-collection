@@ -199,6 +199,18 @@ Thank you.`;
         modalBack.alt =
             `${product.name} Back View`;
 
+                    /* -----------------------------------------------
+           FULLSCREEN IMAGE VIEW
+        ------------------------------------------------ */
+
+        modalFront.onclick = () => {
+            window.open(modalFront.src, "_blank");
+        };
+
+        modalBack.onclick = () => {
+            window.open(modalBack.src, "_blank");
+        };
+
 
         /* -----------------------------------------------
            PRODUCT DETAILS
