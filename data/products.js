@@ -30,7 +30,7 @@ const products = [
     {
         code: "K105",
         name: "Vihan Premium Kurti K105",
-        price: "₹850",
+        price: "₹2850",
         front: "assets/images/products/k105/front.webp",
         back: "assets/images/products/k105/back.webp"
     },
@@ -313,5 +313,26 @@ const products = [
     price: "₹1110",
     front: "assets/images/products/k145/front.webp",
     back: "assets/images/products/k145/back.webp"
+},
+{
+    code: "K146",
+    name: "Vihan Premium Kurti K146",
+    price: "₹1050",
+    front: "assets/images/products/k146/front.webp",
+    back: "assets/images/products/k146/back.webp"
+},
+{
+    code: "K147",
+    name: "Vihan Premium Kurti K147",
+    price: "₹1230",
+    front: "assets/images/products/k147/front.webp",
+    back: "assets/images/products/k147/back.webp"
+},
+{
+    code: "K148",
+    name: "Vihan Premium Kurti K148",
+    price: "₹1205",
+    front: "assets/images/products/k148/front.webp",
+    back: "assets/images/products/k148/back.webp"
 },
 ];
